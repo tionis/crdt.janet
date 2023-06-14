@@ -1,0 +1,13 @@
+(import ../crdt/list)
+(use ../crdt/utils)
+
+(def l (list/new))
+(:insert l 0 "1")
+(:insert l 0 "0")
+(:insert l 2 "2")
+(:insert l 3 "3")
+(assert (deep= (:view l)
+               ["0" "1" "2" "3"]))
+(:delete l 0)
+(assert (deep= (:view l)
+               ["1" "2" "3"]))
