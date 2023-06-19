@@ -22,3 +22,10 @@
       :counter 0
       :node-id (gen-rand-id)}
     List))
+
+(def FracList
+  @{:insert
+    (fn [x index element])
+              )})
+
+(defn new-frac-list [])
